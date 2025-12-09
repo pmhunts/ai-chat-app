@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: ai-chat-backend
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+    plan: free
+
+  - type: web
+    name: ai-chat-frontend
+    runtime: static
+    buildCommand: npm run build
+    staticPublishPath: ./build
+    envVars:
+      - key: REACT_APP_API_URL
+        value: https://ai-chat-backend.onrender.com/api
+    plan: free
