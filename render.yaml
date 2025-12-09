@@ -16,5 +16,5 @@ services:
     staticPublishPath: ./build
     envVars:
       - key: REACT_APP_API_URL
-        value: https://ai-chat-backend.onrender.com/api
+        value: https://ai-chat-app-xbm5.onrender.com/api
     plan: free
