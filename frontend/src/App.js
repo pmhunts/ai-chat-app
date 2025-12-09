@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const API_URL = process.env.REACT_APP_API_URL || "http://localhost:3002/api";
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:3001/api";
 
 export default function ChatApp() {
   const [messages, setMessages] = useState([]);
